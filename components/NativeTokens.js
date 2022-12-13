@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Table } from "@web3uikit/core";
 import styles from '../styles/Home.module.css';
 import { Reload } from '@web3uikit/icons'
+import { v4 as uuidv4, v4 } from 'uuid';
 
 const NativeTokens = ({
     wallet,
@@ -34,7 +35,7 @@ const NativeTokens = ({
 
     return (
         <>
-            <div className={styles.tabHeading}>Native Balance <Reload style={{cursor:"pointer" , color: "white"}} onClick={getNativeBalance} /></div>
+            <div className={styles.tabHeading}>Native Balance <Reload style={{ cursor: "pointer", color: "white" }} onClick={getNativeBalance} /></div>
             {(nativeBalance > 0 && nativeValue > 0) &&
                 <Table
                     pageSize={1}
@@ -43,9 +44,9 @@ const NativeTokens = ({
                     columnsConfig="300px 300px 250px"
                     data={[["Native", nativeBalance, `$${nativeValue}`]]}
                     header={[
-                        <span>Currency</span>,
-                        <span>Balance</span>,
-                        <span>Value</span>,
+                        <span key={uuidv4()}>Currency</span>,
+                        <span key={uuidv4()}>Balance</span>,
+                        <span key={uuidv4()}>Value</span>,
                     ]}
                 />
             }

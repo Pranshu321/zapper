@@ -4,6 +4,7 @@ import React from 'react'
 import styles from '../styles/Home.module.css';
 import { Table } from "@web3uikit/core";
 import Moralis from "moralis";
+import { v4 as uuidv4 } from 'uuid';
 
 const Tokens = ({ wallet, chain, tokens, setTokens }) => {
     async function getTokenBalances() {
@@ -52,9 +53,9 @@ const Tokens = ({ wallet, chain, tokens, setTokens }) => {
                     columnsConfig="300px 300px 250px"
                     data={tokens.map((e) => [e.token.symbol, e.bal, `$${e.val}`])}
                     header={[
-                        <span>Currency</span>,
-                        <span>Balance</span>,
-                        <span>Value</span>,
+                        <span key={uuidv4()}>Currency</span>,
+                        <span key={uuidv4()}>Balance</span>,
+                        <span key={uuidv4()}>Value</span>,
                     ]}
                 />
             )}
