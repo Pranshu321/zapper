@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@web3uikit/core": "^0.2.28",
+    "@web3uikit/icons": "^0.2.23",
     "axios": "^1.2.1",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",

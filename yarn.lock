@@ -624,6 +624,11 @@
     tiny-glob "^0.2.9"
     tslib "^2.4.0"
 
+"@remix-run/router@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.0.5.tgz#d5c65626add4c3c185a89aa5bd38b1e42daec075"
+  integrity sha512-my0Mycd+jruq/1lQuO5LBB6WTlL/e8DTCYWp44DfMTDcXz8DcTlgF0ISaLsGewt+ctHN+yA8xMq3q/N7uWJPug==
+
 "@rushstack/eslint-patch@^1.1.3":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
@@ -757,6 +762,35 @@
   dependencies:
     "@typescript-eslint/types" "5.46.1"
     eslint-visitor-keys "^3.3.0"
+
+"@web3uikit/config@*":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@web3uikit/config/-/config-0.1.2.tgz#0f61701c094ce40269c59e61cb19d8326dba76ec"
+  integrity sha512-fOY0jxen7nEfivZc7BKm63WRcNEncidFhk+dIVR/0bj4tt5Xl0xyomPgyQqe38d3/PJ3RvqVTdupWFbWNJULkA==
+
+"@web3uikit/core@^0.2.28":
+  version "0.2.28"
+  resolved "https://registry.yarnpkg.com/@web3uikit/core/-/core-0.2.28.tgz#7680d8c16bfce9b5ee0ec6ea1bf6602e9bb62ea5"
+  integrity sha512-Oh4sLk9xfR1mDKTzLjrMo0/fzVdnF4iAvXtVP5k88Xe15SPD3lI2wSGUR2oEWtRfxfgZ4EoheshM2vJEcswFuA==
+  dependencies:
+    "@web3uikit/config" "*"
+    "@web3uikit/icons" "*"
+    "@web3uikit/styles" "*"
+    react-router-dom "^6.3.0"
+
+"@web3uikit/icons@*", "@web3uikit/icons@^0.2.23":
+  version "0.2.23"
+  resolved "https://registry.yarnpkg.com/@web3uikit/icons/-/icons-0.2.23.tgz#7b492f51ccbafbc40b64ec00dd0551cc1c3fb4a1"
+  integrity sha512-b/btCyrb2/0kxZM+9G9IQ9mktIPH9Lfl8dikJxYjSQVCa637S5dtD0+29HwmN3o/kY5KF0idScwqDIF13egQRw==
+  dependencies:
+    "@web3uikit/config" "*"
+
+"@web3uikit/styles@*":
+  version "0.2.26"
+  resolved "https://registry.yarnpkg.com/@web3uikit/styles/-/styles-0.2.26.tgz#e33d6adc2055c598865b11c347e7772ab6e9391e"
+  integrity sha512-oaLXNOqnUVvFT2+Sy99mJbstezEj6cIgq9HD3gNY/0s7No6yf1Kj8wCzYDfs8AZZXf++OyE6D8xPHZD0Dki/oA==
+  dependencies:
+    "@web3uikit/config" "*"
 
 JSONStream@^1.3.5:
   version "1.3.5"
@@ -2590,6 +2624,21 @@ react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-router-dom@^6.3.0:
+  version "6.4.5"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.4.5.tgz#4fdb12efef4f3848c693a76afbeaed1f6ca02047"
+  integrity sha512-a7HsgikBR0wNfroBHcZUCd9+mLRqZS8R5U1Z1mzLWxFXEkUT3vR1XXmSIVoVpxVX8Bar0nQYYYc9Yipq8dWwAA==
+  dependencies:
+    "@remix-run/router" "1.0.5"
+    react-router "6.4.5"
+
+react-router@6.4.5:
+  version "6.4.5"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.4.5.tgz#73f382af2c8b9a86d74e761a7c5fc3ce7cb0024d"
+  integrity sha512-1RQJ8bM70YEumHIlNUYc6mFfUDoWa5EgPDenK/fq0bxD8DYpQUi/S6Zoft+9DBrh2xmtg92N5HMAJgGWDhKJ5Q==
+  dependencies:
+    "@remix-run/router" "1.0.5"
 
 react@18.2.0:
   version "18.2.0"
