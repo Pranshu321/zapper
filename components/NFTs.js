@@ -69,7 +69,7 @@ function Nfts({ chain, wallet, filteredNfts, setFilteredNfts, nfts, setNfts }) {
     return (
         <>
             <div className={style.tabHeading}>
-                NFT Portfolio <Reload onClick={getUserNfts} />
+                NFT Portfolio <Reload style={{ color: "white", cursor: "pointer" }} onClick={getUserNfts} />
             </div>
             <div className={style.filters}>
                 <Input
@@ -92,14 +92,14 @@ function Nfts({ chain, wallet, filteredNfts, setFilteredNfts, nfts, setNfts }) {
             <div className={style.nftList}>
                 {filteredNfts.length > 0 &&
 
-                    filteredNfts.map((e,i) => {
+                    filteredNfts.map((e, i) => {
                         return (
                             <>
-                                <div key={i+1} className={style.nftInfo}>
+                                <div key={i + 1} className={style.nftInfo}>
                                     {e.image ? <img src={e.image} width={200} /> : <img src="https://cdn.dribbble.com/users/383277/screenshots/18055765/media/e5fc935b60035305099554810357012a.png?compress=1&resize=400x300" alt="logo" width={200} />}
-                                    <div style={{marginTop: "20px" , display: "flex" , flexDirection: "column" , justifyContent: "center" , alignItems: "center"}}>
-                                        <div style={{ fontWeight: "700"}}>Name: {e.name}, </div>
-                                        <div style={{fontWeight: "700" , color: "darkcyan"}}>(ID: {e.token_id.slice(0, 5)})</div>
+                                    <div style={{ marginTop: "20px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+                                        <div style={{ fontWeight: "700" }}>Name: {e.name}, </div>
+                                        <div style={{ fontWeight: "700", color: "darkcyan" }}>(ID: {e.token_id.slice(0, 5)})</div>
                                     </div>
                                 </div>
                             </>

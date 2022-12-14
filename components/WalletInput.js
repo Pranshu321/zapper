@@ -7,7 +7,7 @@ const WalletInput = ({ chain, setchain, wallet, setwallet }) => {
         <>
             <div className={styles.header}>
                 <div className={styles.title}>
-                    <svg width="40" height="40" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="logo_exterior" d="M500 250C500 111.929 388.071 0 250 0C111.929 0 0 111.929 0 250C0 388.071 111.929 500 250 500C388.071 500 500 388.071 500 250Z" fill="#784FFE"></path><path id="logo_interior" fill-rule="evenodd" clip-rule="evenodd" d="M154.338 187.869L330.605 187L288.404 250.6L388 250.118L345.792 312.652L168.382 313.787L211.25 250.633L112 250.595L154.338 187.869Z" fill="white"></path></svg>
+                    <img src='https://user-images.githubusercontent.com/86917304/207628137-160de653-38ea-4774-9e2a-e563fe40ee04.png' alt='Logo' width={70}  />
                     <h1>Zapper</h1>
                 </div>
                 <div className={styles.walletInputs}>
