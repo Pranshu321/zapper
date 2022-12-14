@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css';
 import { Table } from "@web3uikit/core";
 import Moralis from "moralis";
 import { v4 as uuidv4 } from 'uuid';
+import { toast, Toaster } from 'react-hot-toast';
 
 const Tokens = ({ wallet, chain, tokens, setTokens }) => {
     const [usd, setusd] = useState(0);
@@ -46,8 +47,32 @@ const Tokens = ({ wallet, chain, tokens, setTokens }) => {
     }
     return (
         <>
-            <div className={styles.tabHeading}>ERC20 Tokens <Reload style={{ cursor: "pointer", color: "white" }} onClick={getTokenBalances} /></div>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+                gutter={8}
+                containerClassName=""
+                containerStyle={{}}
+                toastOptions={{
+                    // Define default options
+                    className: '',
+                    duration: 2000,
+                    style: {
+                        background: '#363636',
+                        color: '#fff',
+                    },
 
+                    // Default options for specific types
+                    success: {
+                        duration: 2000,
+                        theme: {
+                            primary: 'green',
+                            secondary: 'black',
+                        },
+                    },
+                }}
+            />
+            <div className={styles.tabHeading}>ERC20 Tokens <Reload style={{ cursor: "pointer", color: "white" }} onClick={getTokenBalances} /></div>
             {tokens.length > 0 && (
                 <Table
                     pageSize={6}
@@ -56,7 +81,7 @@ const Tokens = ({ wallet, chain, tokens, setTokens }) => {
                     columnsConfig="300px 300px 250px"
                     data={tokens.map((e) => [e.token.symbol, e.bal, `$${e.val}`])}
                     header={[
-                        <span onClick={()=>console.log(usd)} key={uuidv4()}>Currency</span>,
+                        <span onClick={() => console.log(usd)} key={uuidv4()}>Currency</span>,
                         <span key={uuidv4()}>Balance</span>,
                         <span key={uuidv4()}>Value</span>,
                     ]}

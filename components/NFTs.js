@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import style from '../styles/Home.module.css';
 import { Reload } from "@web3uikit/icons";
 import { Input } from "@web3uikit/core"
+import { toast, Toaster } from "react-hot-toast";
 
 function Nfts({ chain, wallet, filteredNfts, setFilteredNfts, nfts, setNfts }) {
     const [nameFilter, setNameFilter] = useState("");
@@ -68,6 +69,31 @@ function Nfts({ chain, wallet, filteredNfts, setFilteredNfts, nfts, setNfts }) {
 
     return (
         <>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+                gutter={8}
+                containerClassName=""
+                containerStyle={{}}
+                toastOptions={{
+                    // Define default options
+                    className: '',
+                    duration: 2000,
+                    style: {
+                        background: '#363636',
+                        color: '#fff',
+                    },
+
+                    // Default options for specific types
+                    success: {
+                        duration: 2000,
+                        theme: {
+                            primary: 'green',
+                            secondary: 'black',
+                        },
+                    },
+                }}
+            />
             <div className={style.tabHeading}>
                 NFT Portfolio <Reload style={{ color: "white", cursor: "pointer" }} onClick={getUserNfts} />
             </div>
